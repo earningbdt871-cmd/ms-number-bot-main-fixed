@@ -1,0 +1,10 @@
+# Versions used for testing in this build
+python-telegram-bot==22.8
+httpx==0.28.1
+fastapi==0.162.5
+pydantic==2.14.3
+SQLAlchemy==2.1.8
+cryptography==50.0.2
+uvicorn>=0.30
+# Only needed when DATABASE_URL is PostgreSQL (db.py uses postgresql+psycopg)
+psycopg[binary]>=3.1
