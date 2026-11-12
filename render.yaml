@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: ms-number-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python combined.py
+    healthCheckPath: /health
+    plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.5
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+      - key: PROVIDER_API_BASE
+        sync: false
+      - key: PROVIDER_API_KEY
+        sync: false
+      - key: APP_SECRET
+        sync: false
+      - key: PUBLIC_API_BASE
+        sync: false
+      - key: DATABASE_URL
+        sync: false
